@@ -1,0 +1,14 @@
+<div class="card p-5 m-5 border-black">
+  <div class="container d-flex flex-row justify-content-around p-3 rounded border border-black"
+    [appCardColor]="character.id">
+    <div [ngClass]="character.id % 2 == 0 ?'text-black':'text-white'">
+      <h1 class="m-3">Name: {{ character.name }}</h1>
+      <h3 class="m-3">ID: {{character.id}}</h3>
+      <h3 class="m-3">Gender: {{character.gender}}</h3>
+      <h3 class="m-3">Species: {{character.species}}</h3>
+    </div>
+    <div>
+      <img [src]="character.image" class="card-img rounded-circle border-black border" alt="image">
+    </div>
+  </div>
+</div>

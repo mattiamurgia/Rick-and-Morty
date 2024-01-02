@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<button (click)="goBack()" class="btn btn-danger mt-3 ms-3">Home</button>
+<div class="container">
+  <div class="mt-1">
+    <h1 class="text-center mb-1">Dettagli</h1>
+    <div class="d-flex justify-content-center" *ngIf="isLoading; else other">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <ng-template #other>
+      <app-character-description [character]="descriptionCharacter"></app-character-description>
+    </ng-template>
+  </div>
+</div>

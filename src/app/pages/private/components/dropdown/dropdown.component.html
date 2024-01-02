@@ -1,0 +1,11 @@
+<div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+  <button type="button" class="btn btn-outline-success px-2" ngbDropdownToggle>Elements for page
+    {{currentValue}}</button>
+  <button class="btn btn-outline-secondary rounded ms-3" (click)="setSlice(20)">Reset</button>
+  <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <button ngbDropdownItem (click)="setSlice(5)">5</button>
+    <button ngbDropdownItem (click)="setSlice(10)">10</button>
+    <button ngbDropdownItem (click)="setSlice(15)">15</button>
+  </div>
+
+</div>

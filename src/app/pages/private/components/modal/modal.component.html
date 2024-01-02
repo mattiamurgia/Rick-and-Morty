@@ -1,0 +1,21 @@
+<div>
+  <div class="modal-header bg-light">
+    <h4 class="modal-title" id="modal-basic-title">Dettagli di {{descriptionCardModal.name}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closedModal()"></button>
+  </div>
+  <div class="container d-flex flex-row justify-content-around p-3 text-black" [appCardColor]="descriptionCardModal.id">
+    <div>
+      <h1 class="m-3">{{ descriptionCardModal.name }}</h1>
+      <h3 class="m-3">ID: {{descriptionCardModal.id}}</h3>
+      <h3 class="m-3">Gender: {{descriptionCardModal.gender }}</h3>
+      <h3 class="m-3">Species: {{descriptionCardModal.species }}</h3>
+    </div>
+    <div>
+      <img [src]="descriptionCardModal.image" class="card-img rounded-circle border-black border" alt="image">
+    </div>
+  </div>
+  <div class="modal-footer bg-light">
+    <button type="button" class="btn btn-outline-success" (click)="verifiedName(descriptionCardModal)">Verified</button>
+    <button type="button" class="btn btn-outline-danger" (click)="closedModal()">Closed</button>
+  </div>
+</div>

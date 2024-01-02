@@ -1,0 +1,17 @@
+<div class="d-flex flex-row justify-content-around align-content-center flex-wrap gap-3 m-5 placeholder-glow">
+  <div class="card" aria-hidden="true" style="width: 18rem;" *ngFor="let character of skeletonArray"
+    [appCardColor]="character.id">
+    <img src="https://placehold.co/600x600" class="card-img-top placeholder bg-primary" alt="image">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <div class="d-flex justify-content-center items-center px-3 placeholder-glow">
+        <button type="button" class="btn btn-primary btn-sm m-3 disabled placeholder col-6"
+          aria-disabled="true"></button>
+        <button type="button" class="btn btn-secondary btn-sm m-3 disabled placeholder col-6"
+          aria-disabled="true"></button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="m-3" *ngIf="character">
+  <!-- <div class="card" [ngClass]="character.id %2 == 0 ? 'bg-danger': 'bg-white'" style="width: 18rem;" *ngFor="let character of arrayCharacter"> -->
+  <div class="card" style="width: 18rem;" [appCardColor]="character.id">
+    <img [src]="character.image" class="card-img-top" alt="image">
+    <div class="card-body">
+      <!-- <h5 class="card-title" *ngIf="!nameVerified; else nameUnverified">{{ character.name | cutWord }}</h5> -->
+      <h5 class="card-title" *ngIf="!nameVerified; else nameUnverified">{{ character.name }}</h5>
+      <ng-template #nameUnverified>
+        <h5 class="card-title">{{ character.name + nameVerified }}</h5>
+      </ng-template>
+      <div class="d-flex justify-content-center items-center">
+        <button type="button" class="btn btn-primary btn-sm m-3" [routerLink]="['/home', character.id]">
+          Page Details
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm m-3" (click)="verifiedCard()">
+          Modal Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

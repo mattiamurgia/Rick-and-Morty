@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/Images/Logo.png" alt="Logo" width="50" height="50"
+        class="d-inline-block align-text-center mx-auto ms-4">
+      <p class="ms-2 d-inline fs-2 text-white title-navbar p-3">Rick and Morty</p>
+    </a>
+    <div class="d-flex align-items-center justify-content-center">
+      <button (click)="logout()" class="btn btn-info text-black mx-3">Logout</button>
+      <h5 class="text-white me-5">Welcome {{((userLog.registrationUser | async)?.email || 'No user' | changeName)}}</h5>
+    </div>
+  </div>
+</nav>
